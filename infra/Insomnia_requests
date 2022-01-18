@@ -1,0 +1,478 @@
+_type: export
+__export_format: 4
+__export_date: 2022-01-18T00:53:59.043Z
+__export_source: insomnia.desktop.app:v2021.1.0
+resources:
+  - _id: req_4e99e80d7f824712b342d43f2bd27b93
+    parentId: fld_af1d2ae8af344c85b2ff3d6e68c9b039
+    modified: 1641664937565
+    created: 1641662216032
+    url: http://localhost:8080/orders
+    name: Place Order
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"productId": "61d9d0832aca6d68a88f80c0",
+        	"userId": 3
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d7be3f3f1fba4e198452417b472f3d6d
+    authentication: {}
+    metaSortKey: -1641662216032
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_af1d2ae8af344c85b2ff3d6e68c9b039
+    parentId: wrk_f303ca0ff86a45ef9bd36f84a36a50aa
+    modified: 1641662181107
+    created: 1641662181107
+    name: Order Service
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1641662181107
+    _type: request_group
+  - _id: wrk_f303ca0ff86a45ef9bd36f84a36a50aa
+    parentId: null
+    modified: 1641057151570
+    created: 1641057151570
+    name: WebFlux - Reactive Store
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_64852ee27c0c4d87ba7d4a91eec76bfc
+    parentId: fld_af1d2ae8af344c85b2ff3d6e68c9b039
+    modified: 1641663542549
+    created: 1641663475274
+    url: http://localhost:8080/orders/1
+    name: Check Orders
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"productId": "61d9c61f32174f002d94fc92",
+        	"userId": 1
+        }	
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d7be3f3f1fba4e198452417b472f3d6d
+    authentication: {}
+    metaSortKey: -1641401476849.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e93804d418034ec3867f79a22fdf500a
+    parentId: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    modified: 1641662207198
+    created: 1641140737667
+    url: http://localhost:8092/transactions/user/2
+    name: Get User Transactions
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_1055e517a16e4231823cc5afadf0a79c
+    authentication: {}
+    metaSortKey: -1641140737667
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    parentId: wrk_f303ca0ff86a45ef9bd36f84a36a50aa
+    modified: 1641138945029
+    created: 1641138945029
+    name: User Service
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1641138945029
+    _type: request_group
+  - _id: req_53fc9c7463694547b692c099674306ef
+    parentId: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    modified: 1641139117599
+    created: 1641138971708
+    url: http://localhost:8092/users/all
+    name: All Users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641138971708
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_49130d419c7e45c9a8a45b583285291a
+    parentId: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    modified: 1641139316700
+    created: 1641139110611
+    url: http://localhost:8092/users
+    name: Create User
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Alice",
+        	"balance": 1000.0
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ecec8b0d01c346f9a97007de1e0623bb
+    authentication: {}
+    metaSortKey: -1641138943858.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_24ab28beff474804a2a02cf6dfeb526a
+    parentId: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    modified: 1641140209624
+    created: 1641139480077
+    url: http://localhost:8092/transactions
+    name: Create Transaction
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"userId": 2,
+        	"amount": 300.0
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ecec8b0d01c346f9a97007de1e0623bb
+    authentication: {}
+    metaSortKey: -1641138940377.3125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e44ea26c907a4e62807f781c9f39997d
+    parentId: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    modified: 1641139395641
+    created: 1641139352454
+    url: http://localhost:8092/users/1
+    name: Update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Bob Bob",
+        	"balance": 2300.0
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ecec8b0d01c346f9a97007de1e0623bb
+    authentication: {}
+    metaSortKey: -1641138936896.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6e7716b0d001477686080d43a6c5f5f6
+    parentId: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    modified: 1641140217124
+    created: 1641139412991
+    url: http://localhost:8092/users/2
+    name: Delete User
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641138933414.9375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1337cafeed86438493e8abd521b8f00b
+    parentId: fld_5ffb4d1b8ea145259bcf27554b8faf53
+    modified: 1641139324158
+    created: 1641139262962
+    url: http://localhost:8092/users/2
+    name: Get User
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ecec8b0d01c346f9a97007de1e0623bb
+    authentication: {}
+    metaSortKey: -1641138929933.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_89854bf7e1c94f34b73cc556839714cc
+    parentId: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    modified: 1642465370335
+    created: 1642465360320
+    url: http://localhost:8091/products/events
+    name: Products Event Stream
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1642465360320
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    parentId: wrk_f303ca0ff86a45ef9bd36f84a36a50aa
+    modified: 1641138915959
+    created: 1641138915959
+    name: Product Service
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1641138915959
+    _type: request_group
+  - _id: req_7569439fbe914218a1202ac63bbb4cc1
+    parentId: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    modified: 1641138926705
+    created: 1641065104843
+    url: http://localhost:8091/products/prices/800/to/1001
+    name: Products by Price Range
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641138916009
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_18aa1dc1d7b8458b8db8d52fb6aaad5a
+    parentId: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    modified: 1641138928840
+    created: 1641062583807
+    url: http://localhost:8091/products/61d0a34af3f49161be6ab53d
+    name: Update PRoduct
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"description": "SLR Camera",
+        	"price": 550.80
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_fc8f0be473444d70b5ac1f53aac41161
+    authentication: {}
+    metaSortKey: -1641138915984
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0e363f594e9c458da25bd80fe3201865
+    parentId: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    modified: 1642467084912
+    created: 1641059027887
+    url: http://localhost:8091/products/61e60ed2da40530b9846657f
+    name: Get Product by Id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641138915971.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ab9e0dd0ed794893a7b92145d4eec7bd
+    parentId: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    modified: 1641138931575
+    created: 1641057160655
+    url: http://localhost:8091/products/all
+    name: All Products
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641138915968.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2c862619fe554a2fb2b271e073eaf281
+    parentId: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    modified: 1641138930173
+    created: 1641057355315
+    url: http://localhost:8091/products/
+    name: Create Product
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"description": "PS5",
+        	"price": 399.9
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e1a005d1c97d428f944782775660fbbb
+    authentication: {}
+    metaSortKey: -1641138915965.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0f4b0cca04b142aa89f41315eebacc5a
+    parentId: fld_4fa8a7db790d4daaa0dd7cdfc21b8e29
+    modified: 1641138927895
+    created: 1641063272794
+    url: http://localhost:8091/products/61d0a3d6511c9a2f001d74eb
+    name: Delete Product
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1641138915959
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_1f69cbbe761d30ec510cce91b8ef342ff0b715d5
+    parentId: wrk_f303ca0ff86a45ef9bd36f84a36a50aa
+    modified: 1641057151779
+    created: 1641057151779
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1641057151779
+    _type: environment
+  - _id: jar_1f69cbbe761d30ec510cce91b8ef342ff0b715d5
+    parentId: wrk_f303ca0ff86a45ef9bd36f84a36a50aa
+    modified: 1641057151796
+    created: 1641057151796
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_9c1cb43dfcda4ca0988ebc3bc3724f17
+    parentId: wrk_f303ca0ff86a45ef9bd36f84a36a50aa
+    modified: 1641057151580
+    created: 1641057151580
+    fileName: WebFlux - Reactive Store
+    contents: ""
+    contentType: yaml
+    _type: api_spec
